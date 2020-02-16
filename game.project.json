@@ -1,0 +1,73 @@
+{
+	"name": "MyEngine",
+	"servePort": 34872,
+	"tree": {
+		"$className": "DataModel",
+		"HttpService": {
+			"$className": "HttpService",
+			"$properties": {
+				"HttpEnabled": true
+			}
+		},
+
+		"ReplicatedStorage": {
+            "$className": "ReplicatedStorage",
+			"Modules": {
+				"$path": "Original/Output/Shared"
+			},
+			"Remotes": {
+				"$className" : "Folder",
+				"Connect": {
+					"$className": "RemoteEvent"
+				}
+			},
+			"Assets": {
+                "$className": "Folder"
+            },
+            "Sounds": {
+                "$className": "Folder"
+			},
+            "DefaultSettings": {
+                "$path": "DefaultSettings.lua"
+            }
+		},
+
+		"ServerStorage": {
+			"$className": "ServerStorage",
+			"ServerData": {
+				"$className": "Folder",
+				"Gamepasses": {
+                    "$className": "Folder"
+				},
+				"DevProducts": {
+                    "$className": "Folder"
+                }
+			}
+		},
+
+		"ServerScriptService": {
+            "$className": "ServerScriptService",
+			"Server": {
+				"$path": "Original/Output/Server"
+			}
+        },
+		"StarterPlayer": {
+            "$className": "StarterPlayer",
+            "StarterPlayerScripts": {
+                "$className": "StarterPlayerScripts",
+                "Client": {
+                    "$path": "Original/Output/Client"
+                }
+            }
+		},
+		"StarterGui": {
+			"$className": "StarterGui",
+			"GameGui": {
+				"$className": "ScreenGui",
+				"$properties": {
+					"ResetOnSpawn": false
+				}
+			}
+		}
+    }
+}
